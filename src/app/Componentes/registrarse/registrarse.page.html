@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary" text-center>
+    <ion-title>Registrarse.</ion-title>
+    <ion-buttons class="btnatras" (click)="Haciasesion()" color="success">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>     
+  <ion-item>
+    <ion-label position="stacked">Numero de identificación.</ion-label>
+    <ion-input [(ngModel)]= "persona.Identificacion" required class="text-input" clearInput type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Nombres completos.</ion-label>
+    <ion-input [(ngModel)]="persona.Nombres" required class="text-input" clearInput type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Apellidos completos.</ion-label>
+    <ion-input [(ngModel)]="persona.Apellidos" required class="text-input" clearInput type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Correo electronico.</ion-label>
+    <ion-input [(ngModel)]="persona.Correo" class="text-input" clearInput type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Numero celular.</ion-label>
+    <ion-input [(ngModel)]="persona.Numerocelular" class="text-input" clearInput type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Clave de acceso.</ion-label>
+    <ion-input [(ngModel)]="persona.Clavedeacceso" required clearInput type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Repita clave de acceso.</ion-label>
+    <ion-input [(ngModel)] = "confirmaciondeclavedeacceso" required clearInput type="password"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button ion-button class="btnredes" (click)="Registrarcredenciales(persona)" color="success">
+    Registrarme.
+  </ion-button>
+  <ion-button ion-button class="btnredes" color="primary" expand="block">
+      <ion-icon name="logo-facebook"></ion-icon>&nbsp;Registro con Facebook.
+    </ion-button>
+    <ion-button ion-button class="btnredes" color="danger" expand="block">
+      <ion-icon name="logo-google"></ion-icon>&nbsp;Registro con Google.
+    </ion-button>
+  <br><br>
+</ion-content>

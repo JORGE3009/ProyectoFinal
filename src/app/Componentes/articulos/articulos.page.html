@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title text-center>Mis artículos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>     
+  <ion-item>
+    <ion-label position="stacked">Codigo del artículo.</ion-label>
+    <ion-input [(ngModel)]="articulo.Codigo" required clearInput type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Nombre.</ion-label>
+    <ion-input [(ngModel)]="articulo.Nombre" required clearInput type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Descripción.</ion-label>
+    <ion-input [(ngModel)]="articulo.Descripcion" required clearInput type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Cantidad.</ion-label>
+    <ion-input [(ngModel)]="articulo.Cantidad" clearInput type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Precio unitario.</ion-label>
+    <ion-input [(ngModel)]="articulo.Preciounitario" clearInput type="number"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button ion-button class="btnredes" (click)="subirArticulo(articulo)" color="success">
+    Subir.
+  </ion-button>    
+</ion-content>

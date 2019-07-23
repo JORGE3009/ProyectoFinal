@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color = "danger">
+    <ion-title text-center>Mi Perfil.</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!--<ion-label *ngFor="let persona of personas">
+      {{ persona?.Correo }} {{ persona?.Nombres }} {{ persona?.Apellidos }}
+    </ion-label>
+
+    <ion-label>
+      {{ persona?.Correo }} {{ persona?.Nombres }} {{ persona?.Apellidos }}
+    </ion-label>-->
+
+    <img class="posicion-icono" src="assets/icon/avatar.svg" alt="">
+    <br>
+    <ion-item>
+      <ion-label position="stacked">Numero de identificación.</ion-label>
+      <ion-input class="text-input" clearInput type="number" value="{{persona?.Identificacion}}" readonly></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="stacked">Correo electronico.</ion-label>
+        <ion-input class="text-input" clearInput type="email" value="{{persona?.Correo}}" readonly>
+        </ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombres completos.</ion-label>
+      <ion-input [(ngModel)]= "nuevapersona.Nombres" class="text-input" clearInput type="text" value="{{persona?.Nombres}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellidos completos.</ion-label>
+      <ion-input [(ngModel)]= "nuevapersona.Apellidos" class="text-input" clearInput type="text" value="{{persona?.Apellidos}}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Numero celular.</ion-label>
+      <ion-input [(ngModel)]= "nuevapersona.Numerocelular" class="text-input" clearInput type="number" value="{{persona?.Numerocelular}}"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button ion-button class="btnredes" color="warning" (click)="modificarPersona(nuevapersona)">
+      Modificar.
+    </ion-button>
+    <br><br>
+  </ion-content>

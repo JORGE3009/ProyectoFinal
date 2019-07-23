@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>Inicio de sesión.</ion-title>
+    <ion-buttons class="btnatras" (click)="Haciahome()" color="success">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content padding>
+  <img class="posicion-icono" src="assets/icon/icono.png" alt="">
+  <br>
+  <ion-item>
+    <ion-label position="stacked">Identificación de acceso.</ion-label>
+    <ion-input [(ngModel)]="correo" clearInput type="text" name="correo"
+      placeholder="Correo electrónico.">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Clave de acceso.</ion-label>
+    <ion-input [(ngModel)]="clavedeacceso" clearInput type="password" name="clavedeacceso" placeholder="********">
+    </ion-input>
+  </ion-item>
+  <br>
+  <ion-button ion-button (click)="Iniciarsesion()" expand="block" color="success">
+    Iniciar la sesión.
+  </ion-button>
+  <ion-button ion-button color="primary" expand="block">
+    <ion-icon name="logo-facebook"></ion-icon>&nbsp;Iniciar con Facebook.
+  </ion-button>
+  <ion-button ion-button color="danger" expand="block">
+    <ion-icon name="logo-google"></ion-icon>&nbsp;Iniciar con Google.
+  </ion-button>
+  <p text-center routerLink="/registrarse">Registrarme.</p>
+  <br><br>
+</ion-content>

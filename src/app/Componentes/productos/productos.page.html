@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title text-center>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <br>
+    <ion-card color="blue" *ngFor="let articulo of articulos">
+      <br>
+      &nbsp;&nbsp;&nbsp;<ion-label position="stacked" class="color">Artículo:</ion-label>
+      <ion-input class="nombre" text-center>&nbsp;{{ articulo.Nombre }}</ion-input>     
+      &nbsp;&nbsp;&nbsp;<ion-label position="stacked">Descripción:</ion-label>
+      &nbsp;&nbsp;&nbsp;<ion-input placeholder="{{ articulo.Descripcion }}" readonly></ion-input>
+      &nbsp;&nbsp;&nbsp;<ion-label position="stacked">Precio unitario:</ion-label>
+      &nbsp;&nbsp;&nbsp;<ion-input placeholder="${{articulo.Preciounitario}}" readonly></ion-input>
+      &nbsp;&nbsp;&nbsp;<ion-label position="stacked">Deja tú dirección de envío:</ion-label>
+      &nbsp;&nbsp;&nbsp;<ion-input type="text" placeholder="---------------------"></ion-input>
+      <ion-input [(ngModel)]="compraProducto.Vendedor" readonly hidden>&nbsp;&nbsp;&nbsp;{{articulo.propietario}}</ion-input>
+      <ion-input [(ngModel)]="compraProducto.Preciototal" readonly hidden>&nbsp;&nbsp;&nbsp;{{articulo.Preciounitario}}</ion-input>
+      <ion-input [(ngModel)]="compraProducto.Articulo" readonly hidden>&nbsp;&nbsp;&nbsp;{{ articulo.propietario + articulo.Codigo}}</ion-input>
+      &nbsp;&nbsp;&nbsp;<ion-item>
+        <ion-label>Selecciona de inmediato la cantidad.</ion-label>
+        <ion-select [(ngModel)]="compraProducto.Cantidad" (ionChange)="comprarArticulo(articulo.propietario, articulo.Preciounitario, articulo.propietario + articulo.Codigo, compraProducto.Cantidad)">
+          <ion-select-option selected>0</ion-select-option>
+          <ion-select-option>1</ion-select-option>
+          <ion-select-option>2</ion-select-option>
+          <ion-select-option>3</ion-select-option>
+          <ion-select-option>4</ion-select-option>
+          <ion-select-option>5</ion-select-option>
+          <ion-select-option>6</ion-select-option>
+          <ion-select-option>7</ion-select-option>
+          <ion-select-option>8</ion-select-option>
+          <ion-select-option>9</ion-select-option>
+          <ion-select-option>10</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-card>  
+    <br>
+</ion-content>

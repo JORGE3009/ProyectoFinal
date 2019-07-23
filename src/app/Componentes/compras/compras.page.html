@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title text-center>Compras.</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+ <ion-content>
+    <ion-card *ngFor="let compra of compras">
+      Se te ha registrado una compra por parte del señor {{compra.Comprador}}.
+    </ion-card>
+  </ion-content>
